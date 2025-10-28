@@ -1,0 +1,181 @@
+.aboutPage {
+  /*====================================================================
+  aboutSection
+  ====================================================================*/
+  .aboutSec {
+    height: auto;
+    background-color: $white;
+    padding-bottom: 7rem;
+
+    @include u-mqMax {
+      margin-bottom: 0.5rem;
+    }
+
+    &__inner {
+      max-width: 80.6%;
+      margin: 0 auto;
+      padding: 8.5rem 7rem 3rem;
+      border: 3px solid $black;
+      border-radius: 20px;
+      display: grid;
+      grid-template-columns: .32fr 1fr;
+      align-items: flex-start;
+      gap: 4rem;
+
+      @include u-mqMax {
+        padding: 3rem;
+        @include u-flex($fd: column);
+      }
+    }
+
+    &__imgCont {
+      width: clamp(32.3rem, 23vw, 56rem);
+      height: clamp(32.3rem, 23vw, 56rem);
+      border: 3px solid $black;
+      border-radius: 60%;
+      @include u-flex($jc: center, $ai: center);
+
+      @include u-mqMax {
+        width: 15rem;
+        height: 15rem;
+        align-self: center;
+      }
+    }
+
+    &__imgWrap {
+      max-width: clamp(16rem, 11.5vw, 32rem);
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      position: relative;
+
+      @include u-mqMax {
+        width: 7rem;
+        height: 7rem;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    &__cont {
+      padding-bottom: 4rem;
+      margin-bottom: 4rem;
+      border-bottom: 3px solid $black;
+
+      @include u-mqMax {
+        padding-bottom: 1.5rem;
+      }
+    }
+
+    &__hd {
+      font-size: 9rem;
+      font-family: $Rubik;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+
+      span {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      @include u-mqMax {
+        font-size: 6rem;
+        margin-bottom: 0.5rem;
+
+        span {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    &__ttl {
+      height: 3rem;
+      margin: 0 0 2rem;
+
+      svg {
+        display: block;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        height: 0.8rem;
+        overflow: visible;
+        width: 100%;
+        margin-right: auto;
+      }
+
+      text {
+        font-family: $Rubik;
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: capitalize;
+        fill: $white;
+        stroke: $black;
+        stroke-width: 1.5;
+        text-anchor: start;
+        line-height: 1;
+        letter-spacing: 0.08em;
+        dominant-baseline: hanging;
+      }
+    }
+
+    &__txt {
+      font-size: 2rem;
+      font-family: $Rubik;
+      font-weight: 400;
+      line-height: 1.7;
+      text-align: justify;
+
+      @include u-mqMax {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__btnCont,
+    &__socialCont {
+      @include u-flex;
+      gap: 2rem;
+    }
+
+    &__btnCont {
+      padding: 1.5rem 0;
+
+      @include u-mqMax {
+        padding: 0.5rem 0;
+      }
+    }
+
+    &__socialCont {
+      padding: 4rem 0 0 0.5rem;
+
+      @include u-mqMax {
+        padding-top: 2rem;
+      }
+    }
+
+    &__btn,
+    &__socialBtn {
+      max-width: 5.5rem;
+      display: block;
+      @include u-trs;
+      @include u-hoverOp;
+    }
+
+    &__btn {
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    &__btnImg,
+    &__socialBtnImg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

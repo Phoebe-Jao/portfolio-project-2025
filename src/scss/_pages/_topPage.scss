@@ -1,0 +1,264 @@
+.topPage {
+  /*====================================================================
+  kvSection
+  ====================================================================*/
+  .kvSec {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    &__inner {
+      height: 100%;
+      @include u-flex($jc: center, $fd: column);
+    }
+
+    &__subTtl {
+      font-size: 1.8rem;
+      font-family: $Rubik;
+      font-weight: 900;
+      color: $black;
+      letter-spacing: 0.06em;
+      line-height: 1.6;
+      text-align: center;
+      z-index: 2;
+    }
+
+    &__ttl {
+      font-size: 7rem;
+      font-family: $Rubik;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      line-height: 2;
+      color: $black;
+      text-align: center;
+      z-index: 2;
+    }
+  }
+
+  /*====================================================================
+  workSection
+  ====================================================================*/
+  .workSec {
+    height: 72rem;
+    margin-top: 0.5rem;
+    background-image: url('/images/top/work_bg.png');
+    background-repeat: no-repeat;
+    background-position: center 9rem;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+    &__inner {
+      @include u-flex($jc: center, $ai: center, $fd: column);
+      gap: 5rem;
+      padding-bottom: 6rem;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    &__ttl {
+      font-size: 5rem;
+      font-family: $Rubik;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &__parallax {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__parallaxCircle {
+      position: absolute;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      border: 1px solid $black;
+      will-change: transform;
+      z-index: 1;
+    }
+  }
+
+  /*====================================================================
+  aboutSection
+  ====================================================================*/
+  .aboutSec {
+    height: 42rem;
+    margin-top: 0.5rem;
+    background-color: $black;
+
+    &__wrapper {
+      @include u-flex;
+      gap: 0.5rem;
+      height: 100%;
+
+      @include u-mqMax {
+        flex-direction: column;
+      }
+    }
+
+    &__inner {
+      background-color: $white;
+      border-radius: 8px;
+      width: 100%;
+      padding: 5rem;
+
+      @include u-mqMax {
+        padding: 0;
+      }
+    }
+    
+    &__innerWrap {
+      @include u-mqMax {
+        padding: 2rem;
+      }
+    }
+    
+    &__side {
+      @include u-flex($jc: center, $ai: center);
+      border-radius: 8px;
+      padding: 6rem 5rem;
+      max-width: 100%;
+      background-color: $white;
+      overflow: hidden;
+
+      @include u-mqMax {
+        padding: 3.5rem 2rem;
+      }
+    }
+
+    &__ttl {
+      @include u-flex($jc: center, $ai: center);
+      transform: rotate(-90deg);
+      font-size: 6rem;
+      font-family: $Rubik;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+
+      @include u-mqMax {
+        transform: rotate(0);
+        font-size: 4rem;
+      }
+    }
+
+    &__bigTxt {
+      font-size: 4rem;
+      font-family: $Rubik;
+      font-weight: 700;
+    }
+
+    &__smallTxt {
+      font-size: 1.4rem;
+      font-family: $Rubik;
+      font-weight: 400;
+      line-height: 1.5;
+      margin: 2rem 0 3rem;
+
+      @include u-mqMax {
+        text-align: justify;
+      }
+    }
+  }
+
+  /*====================================================================
+  contactSection
+  ====================================================================*/
+  .contactSec {
+    position: relative;
+    padding: 7.5rem 0 8rem;
+    z-index: 2;
+    background-color: $black;
+
+    @include u-mqMax {
+      margin-top: 9rem;
+      padding: 4.5rem 0 5rem;
+    }
+
+    &__inner {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    &__ttl {
+      height: 4rem;
+      margin: 7rem 0 2.5rem;
+
+      svg {
+        display: block;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        height: 0.8rem;
+        overflow: visible;
+        width: fit-content;
+        margin: auto;
+      }
+
+      text {
+        font-family: $Rubik;
+        font-size: 6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        fill: $black;
+        stroke: $white;
+        stroke-width: 2.5;
+        text-anchor: middle;
+        line-height: 1;
+        letter-spacing: 0.08em;
+        dominant-baseline: hanging;
+      }
+
+      @include u-mqMax {
+        margin: 3rem 0 2.5rem;
+      }
+    }
+
+    &__txt {
+      font-size: 1.4rem;
+      font-family: $Rubik;
+      font-weight: 400;
+      text-align: center;
+      color: $white;
+      line-height: 1.8;
+    }
+
+    &__img {
+      max-width: 8rem;
+      margin: 3rem auto;
+      filter: invert(1);
+      display: block;
+    }
+
+    &__btn {
+      margin: 0 auto 8rem;
+      border-color: $white;
+      transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+
+      &:hover {
+        border-color: $white;
+      }
+
+      @include u-mqMax {
+        margin: 0 auto 3.5rem;
+      }
+    }
+
+    &__bnr {
+      display: inline-block;
+      font-size: 5rem;
+      font-family: $Rubik;
+      font-weight: 900;
+      color: rgba($white, 0.2);
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      padding-right: 1rem;
+      pointer-events: none;
+    }
+  }
+}

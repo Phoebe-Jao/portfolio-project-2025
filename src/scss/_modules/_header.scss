@@ -1,0 +1,240 @@
+/*====================================================================
+header
+====================================================================*/
+.header {
+  height: 10rem;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 3px solid $black;
+  z-index: 100;
+  background: $white;
+  overflow: hidden;
+  $this: &;
+
+  @include u-mqMax {
+    top: 0;
+    left: 1%;
+    background-color: $black;
+    max-height: max-content;
+    border: none;
+    padding: 0.5rem 0 0.1rem;
+    overflow: visible;
+  }
+
+  &__wrapper {
+    @include u-mqMax {
+      @include u-flex($ai: center);
+      width: calc(100% - 10px);
+      max-width: 32rem;
+      height: 5.6rem;
+      border: 3px solid $black;
+      border-radius: 12px;
+      padding: 1rem 2rem;
+      background-color: $white;
+      position: relative;
+    }
+  }
+
+  &__logoWrap {
+    @include u-flex($ai: center);
+    gap: 6.5%;
+    position: absolute;
+    top: 0;
+    left: 4.87%;
+    width: 38.2%;
+    height: 100%;
+    z-index: 3;
+
+    @include u-mqMax {
+      width: max-content;
+      margin-right: auto;
+      position: static;
+    }
+  }
+  
+  &__logo {
+    width: 100%;
+    min-width: 15rem;
+    max-width: 24.2rem;
+    margin-top: 1.8rem;
+
+    a {
+      display: block;
+    }
+
+    @include u-mqMax {
+      max-width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  &__logoJob {
+    font-size: 1.6rem;
+    font-family: $Rubik;
+    line-height: 1;
+    @include u-flex($ai: flex-end);
+    width: 94%;
+
+    @include u-mqMax {
+      font-size: 1.2rem;
+      width: 100%;
+    }
+  }
+
+  &__logoName {
+    font-size: 4.7rem;
+    font-family: $Rubik;
+    text-transform: uppercase;
+    margin-top: 0.8rem;
+
+    @include u-mqMax {
+      font-size: 3.9rem;
+    }
+  }
+  
+  &__tagline {
+    font-size: 1rem;
+    font-family: $Rubik;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0;
+    @include u-flex($ai: center);
+  }
+
+  &__nav {
+    @include u-flex;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 3.5rem;
+    width: 41%;
+    height: 100%;
+
+    @include u-mqMax {
+      // display: none !important;
+      visibility: hidden;
+      @include u-trs($duration: 0.3s);
+      transform: scale(0);
+      width: 100%;
+      max-width: 14rem;
+      height: auto;
+      top: 1rem;
+      left: 15rem;
+      overflow: hidden;
+      transform-origin: top right;
+      background: $black;
+      border-radius: 22px;
+      padding: 7rem 3rem 4rem 3rem;
+      z-index: 100;
+
+      &.is-open {
+        // display: flex !important;
+        visibility: visible;
+        transform: scale(1);
+
+
+        #{$this}__navListItemLnk {
+          color: $white;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  &__navList {
+    @include u-flex($jc: flex-end);
+    gap: 4.8rem;
+    width: 100%;
+    height: inherit;
+
+    @include u-mqMax {
+      @include u-flex($ai: flex-start, $fd: column);
+      gap: 2.4rem;
+      padding-left: 1.7rem;
+    }
+  }
+
+  &__navListItem {
+    position: relative;
+    @include u-trs;
+    @include u-hoverOp;
+
+    @include u-mqMax {
+      &:before {
+        content: '';
+        height: 1.2rem;
+        width: 1.2rem;
+        filter: invert(1);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        left: -1.5rem;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__navListItem-01 {
+    &:before {
+      background-image: url('/images/common/icon_home.png');
+    }
+  }
+
+  &__navListItem-02 {
+    &:before {
+      background-image: url('/images/common/icon_work.png');
+    }
+  }
+
+  &__navListItem-03 {
+    &:before {
+      background-image: url('/images/common/icon_about.png');
+    }
+  }
+
+  &__navListItem-04 {
+    &:before {
+      background-image: url('/images/common/icon_contact.png');
+    }
+  }
+
+  &__navListItemLnk {
+    font-size: 1.6rem;
+    font-family: $Rubik;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    @include u-flex($jc: center, $ai: center, $fd: column);
+    height: 100%;
+  }
+
+  &__btn {
+    @include u-mqMax {
+      height: 3.4rem;
+      width: 8rem;
+      max-width: 100%;
+      border: 1px solid transparent;
+      border-radius: 2.4rem;
+      background-color: $black;
+      font-size: 1.2rem;
+      font-family: $Rubik;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: $white;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1000;
+      @include u-trs($duration: 0.3s);
+
+      &.is-open {
+        color: $black;
+        background-color: $white;
+      }
+    }
+  }
+}

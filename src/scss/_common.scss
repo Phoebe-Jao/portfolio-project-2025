@@ -1,0 +1,407 @@
+/*====================================================================
+COMMON LAYOUT
+====================================================================*/
+*,
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+
+  @include u-mqMaxMin($minW: $windowSP, $maxW: 1320px) {
+    font-size: calc(10vw / 13.20);
+  }
+
+  // SP
+  @include u-mqMax($maxW: $windowSP) {
+    font-size: calc(10vw / 3.75);
+  }
+}
+
+body {
+  font-family: $Rubik;
+  background-color: $black;
+}
+
+section {
+  background-color: $white;
+  border-radius: 8px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+/*-----------------------------------------------
+PC/SP
+------------------------------------------------*/
+// PC
+.u-pcDb {
+  display: block;
+}
+.u-pcDib {
+  display: inline-block;
+}
+.u-pcDin {
+  display: inline;
+}
+.u-pcDf {
+  display: flex;
+}
+.u-pcDt {
+  display: table;
+}
+.u-pcDtc {
+  display: table-cell;
+}
+
+.u-spDb,
+.u-spDib,
+.u-spDin,
+.u-spDf,
+.u-spDt,
+.u-spDtc {
+  display: none;
+}
+
+.u-txtWhite {
+  color: $white !important;
+}
+
+.u-txtBold {
+  font-weight: 700 !important;
+}
+
+.u-txtTight {
+  letter-spacing: 0 !important;
+}
+
+.u-brdrWhite {
+  border: 1px solid $white !important;
+}
+
+.u-ml0 {
+  margin-left: 0 !important;
+}
+
+.u-txtIndent0 {
+  text-indent: 0 !important;
+}
+
+// SP
+@include u-mqMax($maxW: $windowSP) {
+  .u-pcDb,
+  .u-pcDib,
+  .u-pcDin,
+  .u-pcDf,
+  .u-pcDt,
+  .u-pcDtc {
+    display: none;
+  }
+
+  .u-spDb {
+    display: block;
+  }
+  .u-spDib {
+    display: inline-block;
+  }
+  .u-spDin {
+    display: inline;
+  }
+  .u-spDf {
+    display: flex;
+  }
+  .u-spDt {
+    display: table;
+  }
+  .u-spDtc {
+    display: table-cell;
+  }
+
+  .u-spMw100 {
+    max-width: 100% !important;
+  }
+
+  .u-spMh100 {
+    max-height: 100% !important;
+  }
+}
+
+/*-----------------------------------------------
+main
+------------------------------------------------*/
+.siteContent {
+  min-height: calc(100vh - #{$headerHeightPC + $headerHeightPC});
+  padding-top: 7%;
+  overflow: hidden;
+
+  @include u-mqMax {
+    padding-top: 23%;
+  }
+}
+
+.js-pageTrs {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: $black;
+}
+
+.u-bdrTrs {
+  border-color: transparent !important;
+}
+
+.common {
+  &__pageHdr {
+    position: relative;
+    padding: 16rem 5vw 6rem;
+    overflow: hidden;
+    border-bottom: 3px solid $black;
+    margin-bottom: 10rem;
+
+    @include u-mqMax {
+      padding: 7rem 5vw 3rem;
+      margin-bottom: 4.5rem;
+    }
+  }
+
+  &__pageHdrTtl {
+    height: 4rem;
+    margin: 0 0 2rem;
+
+    svg {
+      display: block;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      height: 0.8rem;
+      overflow: visible;
+      width: 100%;
+      margin-right: auto;
+    }
+
+    text {
+      font-family: $Rubik;
+      font-size: 6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      fill: $white;
+      stroke: $black;
+      stroke-width: 2;
+      text-anchor: start;
+      line-height: 1;
+      letter-spacing: 0.08em;
+      dominant-baseline: hanging;
+    }
+  }
+
+  &__pageHdrSubTtl {
+    font-size: 1.55rem;
+    font-family: $Rubik;
+    font-weight: 400;
+    letter-spacing: 0.07em;
+  }
+
+  &__btn {
+    font-size: 1.4rem;
+    font-family: $Rubik;
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+    line-height: normal;
+    background-color: $black;
+    @include u-flex($jc: center, $ai: center);
+    height: 5.4rem;
+    width: 100%;
+    max-width: 18rem;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 48px;
+    @include u-trs($duration: 0.4s);
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+      border: 2px solid $black;
+    }
+  }
+
+  &__timeline {
+    @include u-flex($ai: flex-start, $fd: column);
+  }
+
+  &__timelineItem {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  &__timelineBullet {
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: #3498db;
+    border-radius: 50%;
+
+    @include u-mqMax {
+      top: 0.3rem;
+    }
+  }
+
+  &__timelineLine {
+    width: 4px;
+    height: 100%;
+    background: #3498db;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    transform: scaleY(1);
+
+    @include u-mqMax {
+      top: 0.3rem;
+    }
+  }
+
+  &__timelineTtl {
+    font-size: 2rem;
+    font-family: $Rubik;
+    color: $black;
+    margin: 0;
+
+    @include u-mqMax {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__timelineSubTtl {
+    font-size: 1.6rem;
+    font-family: $Rubik;
+    color: $black;
+    margin: 0.3rem 0;
+
+    @include u-mqMax {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__timelineTime {
+    font-size: 1.4rem;
+    font-family: $Rubik;
+    color: $gray;
+    display: block;
+
+    @include u-mqMax {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__timelineTxt {
+    font-size: 1.6rem;
+    font-family: $Rubik;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    color: $black;
+    padding: 1rem 0 2.5rem;
+
+    @include u-mqMax {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  &__content {
+    position: relative;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 600px;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1.5rem;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+}

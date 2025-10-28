@@ -1,0 +1,130 @@
+/*====================================================================
+footer
+====================================================================*/
+.footer {
+  width: 100%;
+  background-color: $white;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+
+  &__inner {
+    position: relative;
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 5vw;
+    overflow: hidden;
+    @include u-flex($ai: center);
+    gap: 2.5%;
+
+    @include u-mqMax {
+      flex-direction: column;
+      padding: 4rem 0 2rem;
+    }
+  }
+
+  &__nav {
+    @include u-flex;
+    position: relative;
+    top: 0;
+    right: auto;
+    width: min-content;
+    height: 10rem;
+    margin-left: -1rem;
+    z-index: 2;
+
+    @include u-mqMax {
+      margin-right: auto;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__navList {
+    @include u-flex;
+    gap: 0.5rem;
+    width: 100%;
+    height: inherit;
+
+    @include u-mqMax {
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+  }
+
+  &__navListItem {
+    position: relative;
+    @include u-trs;
+    @include u-hoverOp;
+  }
+
+  &__navListItemLnk {
+    font-size: 1.6rem;
+    font-family: $Rubik;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    @include u-flex($jc: center, $ai: center, $fd: column);
+    gap: 0.25rem;
+    padding: 0 1.5rem;
+    height: 100%;
+
+    @include u-mqMax {
+      align-items: flex-start;
+    }
+  }
+
+  &__copyright {
+    width: fit-content;
+    height: 100%;
+    margin: 0 7.5% 0 auto;
+    font-size: 1rem;
+    font-family: $Rubik;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0;
+    color: rgba($black, 0.5);
+
+    @include u-mqMax {
+      margin-right: 2%;
+    }
+  }
+
+  &__toTop {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 9.59%;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    border-left: 3px solid $black;
+    background-color: $white;
+    cursor: pointer;
+    @include u-trs($duration: 0.4s);
+    z-index: 10;
+
+    svg {
+      width: 15%;
+      min-width: 2rem;
+      stroke: $black;
+      stroke-linecap: round;
+      stroke-width: 4;
+      z-index: 1;
+      position: relative;
+      bottom: 0;
+      overflow: visible;
+      @include u-trs($duration: 0.4s);
+    }
+
+    &:hover {
+      svg {
+        bottom: 0.3rem;
+      }
+    }
+  }
+}
