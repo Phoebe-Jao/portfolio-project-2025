@@ -88,7 +88,7 @@ const ContactSection = () => {
         </h2>
         <p className="contactSec__txt fade-up">Want to reach out? Just drop me an email!</p>
         <img src={mail} alt="email" className="contactSec__img fade-up" />
-        <a href="#" className="contactSec__btn common__btn js-email fade-up">Email Me</a>
+        <a href="mailto:jaophoebe@gmail.com" className="contactSec__btn common__btn js-email fade-up">Email Me</a>
         <span className="contactSec__bnr" ref={rightBnr}>CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT</span>
       </div>
     </section>

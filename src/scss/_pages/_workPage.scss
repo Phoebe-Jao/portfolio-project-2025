@@ -34,6 +34,7 @@
       font-weight: 700;
       text-transform: uppercase;
       border: none;
+      outline: none;
 
       @include u-mqMax {
         margin-bottom: 1rem;
@@ -45,6 +46,7 @@
       font-size: 1.8rem;
       font-weight: 500;
       border: none;
+      outline: none;
       margin-left: 2rem;
       position: relative;
 
@@ -81,6 +83,7 @@
       position: relative;
       @include u-trs;
       @include u-hoverOp;
+      cursor: pointer;
     }
 
     &__listItemImgWrap {

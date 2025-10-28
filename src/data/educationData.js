@@ -1,15 +1,15 @@
 const educationData = [
   {
-    title: "Junior Frontend Developer",
-    subtitle: "XYZ Company",
-    period: "2023 - Present",
-    description: "Worked on WordPress sites, SCSS, PugJS, and JS animations."
+    title: "UI/UX for Web Design and Development (Modules 3 & 4)",
+    subtitle: "De La Salle-College of Saint Benilde School of Professional and Continuing Education",
+    period: "Sep 2022 - Oct 2022",
+    description: ""
   },
   {
-    title: "Intern",
-    subtitle: "ABC Inc.",
-    period: "2022",
-    description: "Assisted in developing landing pages and optimized performance."
+    title: "Bachelor of Science in Information Technology",
+    subtitle: "University of Santo Tomas",
+    period: "Aug 2018 - Jun 2022",
+    description: ""
   }
 ];
 

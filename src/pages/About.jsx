@@ -93,11 +93,11 @@ const About = () => {
                 </svg>
               </h3>
               <div className="aboutSec__btnCont">
-                <a href="#" target="_blank" className="aboutSec__btn">
+                <a href="/pdf/JAO-PHOEBE-CV-2025.pdf" download="/pdf/JAO-PHOEBE-CV-2025.pdf" target="_blank" className="aboutSec__btn">
                   <img src={download} alt="download" className="aboutSec__btnImg" />
                   Download
                 </a>
-                <a href="#" target="_blank" className="aboutSec__btn">
+                <a href="/pdf/JAO-PHOEBE-CV-2025.pdf" target="_blank" className="aboutSec__btn">
                   <img src={view} alt="download" className="aboutSec__btnImg" />
                   View
                 </a>

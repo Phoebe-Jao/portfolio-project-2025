@@ -5,19 +5,19 @@ import workData from "../data/workData";
 
 const Work = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedTag, setSelectedTag] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const allTags = ["All", ...new Set(workData.flatMap(work => work.tags))];
+  const categories = ["All", ...new Set(workData.map(item => item.category))];
 
   const filteredWorks = workData.filter(work => {
     const matchesSearch = work.title
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
 
-    const matchesTag =
-      selectedTag === "All" || work.tags.includes(selectedTag);
+    const matchesCategory =
+      selectedCategory === "All" || work.category.includes(selectedCategory);
 
-    return matchesSearch && matchesTag;
+    return matchesSearch && matchesCategory;
   });
 
   return (
@@ -31,12 +31,12 @@ const Work = () => {
           <div className="workSec__filter">
             <select
               className="workSec__filterDropdown"
-              value={selectedTag}
-              onChange={(e) => setSelectedTag(e.target.value)}
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
             >
-              {allTags.map((tag) => (
-                <option key={tag} value={tag}>
-                  {tag}
+              {categories.map((category, index) => (
+                <option key={index} value={category}>
+                  {category}
                 </option>
               ))}
             </select>
