@@ -47,7 +47,7 @@ const AboutSection = () => {
               <p className="aboutSec__bigTxt">Phoebe</p>
               <p className="aboutSec__smallTxt">I am a Junior Frontend Web Developer based in the Philippines, born in 2000. I am passionate about building clean, responsive websites and constantly improving my skills in web development.</p>
             </div>
-            <a href="/work" className="common__btn aboutSec__btn">See More</a>
+            <a href="/works" className="common__btn aboutSec__btn">See More</a>
           </div>
           
         </div>

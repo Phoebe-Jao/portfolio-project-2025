@@ -4,7 +4,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Top from './pages/Top'
 import About from './pages/About'
-import Work from './pages/Work'
+import Works from './pages/Works'
 
 function Page({ children }) {
   return (
@@ -29,7 +29,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Page><Top /></Page>} />
           <Route path="/about" element={<Page><About /></Page>} />
-          <Route path="/work" element={<Page><Work /></Page>} />
+          <Route path="/works" element={<Page><Works /></Page>} />
         </Routes>
       </AnimatePresence>
       <Footer />

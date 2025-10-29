@@ -39,7 +39,7 @@ const WorkSection = () => {
     <section className="workSec">
       <div className="workSec__inner fade-up">
         <h2 className="workSec__ttl">Works</h2>
-        <a href="/work" className="common__btn workSec__btn">See More</a>
+        <a href="/works" className="common__btn workSec__btn">See More</a>
       </div>
       <ParallaxShowcase />
     </section>

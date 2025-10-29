@@ -1,30 +1,34 @@
 import { useState } from "react";
 import PageHeader from "../components/block/PageHeader";
-import WorkItem from "../components/work/WorkItem";
+import WorkItem from "../components/works/WorkItem";
 import workData from "../data/workData";
 
-const Work = () => {
+const Works = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const categories = ["All", ...new Set(workData.map(item => item.category))];
 
-  const filteredWorks = workData.filter(work => {
-    const matchesSearch = work.title
+  const filteredWorks = workData.filter(works => {
+    const matchesSearch = works.title
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
 
     const matchesCategory =
-      selectedCategory === "All" || work.category.includes(selectedCategory);
+      selectedCategory === "All" || works.category.includes(selectedCategory);
 
     return matchesSearch && matchesCategory;
+  });
+
+  const sortedWorks = [...filteredWorks].sort((a, b) => {
+    return new Date(b.date) - new Date(a.date);
   });
 
   return (
     <main className='siteContent workPage'>
       <section className="workSec">
         <PageHeader
-            title='Work'
+            title='Works'
             subtitle='My Works'
           />
         <div className="workSec__inner">
@@ -51,8 +55,8 @@ const Work = () => {
           </div>
           <ul className="workSec__list">
             {
-              filteredWorks.length > 0 ? (
-              filteredWorks.map((item, index) => (
+              sortedWorks.length > 0 ? (
+              sortedWorks.map((item, index) => (
                 <WorkItem
                   key={index}
                   title={item.title}
@@ -73,4 +77,4 @@ const Work = () => {
   )
 }
 
-export default Work;
+export default Works;

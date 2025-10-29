@@ -15,7 +15,7 @@ const ParallaxShowcase = () => {
     <ParallaxProvider>
       <div className="workSec__parallax">
         {
-          showcase.map((work, i) => (
+          showcase.map((works, i) => (
           <Parallax
             key={i}
             speed={15 + i * 2}
@@ -27,7 +27,7 @@ const ParallaxShowcase = () => {
                 height: circleStyles[i].size,
                 bottom: circleStyles[i].bottom,
                 left: circleStyles[i].left,
-                backgroundImage: `url(/images/work/${work.image})`
+                backgroundImage: `url(/images/works/${works.image})`
               }}
             ></div>
           </Parallax>

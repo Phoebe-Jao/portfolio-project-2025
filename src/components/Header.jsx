@@ -25,7 +25,7 @@ const Header = () => {
           <nav className="header__nav u-pcDb">
             <ul className="header__navList">
               <li className="header__navListItem"><Link to="/" className="header__navListItemLnk">Home</Link></li>
-              <li className="header__navListItem"><Link to="/work" className="header__navListItemLnk">Work</Link></li>
+              <li className="header__navListItem"><Link to="/works" className="header__navListItemLnk">Works</Link></li>
               <li className="header__navListItem"><Link to="/about" className="header__navListItemLnk">About</Link></li>
               <li className="header__navListItem">
                 {isHome ? (
@@ -40,7 +40,7 @@ const Header = () => {
           <nav className={`header__nav u-spDb ${isOpen ? "is-open" : ""}`}>
             <ul className="header__navList">
               <li className="header__navListItem header__navListItem-01" onClick={() => setIsOpen(false)}><Link to="/" className="header__navListItemLnk">Home</Link></li>
-              <li className="header__navListItem header__navListItem-02" onClick={() => setIsOpen(false)}><Link to="/work" className="header__navListItemLnk">Work</Link></li>
+              <li className="header__navListItem header__navListItem-02" onClick={() => setIsOpen(false)}><Link to="/works" className="header__navListItemLnk">Works</Link></li>
               <li className="header__navListItem header__navListItem-03" onClick={() => setIsOpen(false)}><Link to="/about" className="header__navListItemLnk">About</Link></li>
               <li className="header__navListItem  header__navListItem-04">
                 {isHome ? (

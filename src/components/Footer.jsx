@@ -14,7 +14,7 @@ const Footer = () => {
         <nav className="footer__nav">
           <ul className="footer__navList">
             <li className="footer__navListItem"><Link to="/" className="footer__navListItemLnk">Home</Link></li>
-            <li className="footer__navListItem"><Link to="/work" className="footer__navListItemLnk">Work</Link></li>
+            <li className="footer__navListItem"><Link to="/works" className="footer__navListItemLnk">Works</Link></li>
             <li className="footer__navListItem"><Link to="/about" className="footer__navListItemLnk">About</Link></li>
             <li className="footer__navListItem">
               {isHome ? (
