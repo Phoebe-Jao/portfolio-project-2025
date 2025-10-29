@@ -699,6 +699,17 @@ body {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow: auto !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+body::-webkit-scrollbar {
+  display: none !important;
+}
+
 html {
   font-size: 62.5%;
 }
