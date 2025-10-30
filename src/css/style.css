@@ -1432,37 +1432,7 @@ main
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  gap: 1.3rem;
-}
-.topPage .aboutSec__imgCont {
-  width: clamp(3rem, 3.5vw, 6rem);
-  height: clamp(3rem, 3.5vw, 6rem);
-  border: 3px solid #000;
-  border-radius: 60%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-@media screen and (max-width: 768px) {
-  .topPage .aboutSec__imgCont {
-    width: 4rem;
-    height: 4rem;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
+  gap: 1rem;
 }
 .topPage .aboutSec__imgWrap {
   max-width: clamp(2.5rem, 2.5vw, 3.5rem);
@@ -1474,6 +1444,7 @@ main
   .topPage .aboutSec__imgWrap {
     width: 4rem;
     height: 3rem;
+    margin-top: 1rem;
   }
 }
 .topPage .aboutSec__img {

@@ -167,21 +167,7 @@
 
     &__nameCont {
       @include u-flex($ai: center);
-      gap: 1.3rem;
-    }
-
-    &__imgCont {
-      width: clamp(3rem, 3.5vw, 6rem);
-      height: clamp(3rem, 3.5vw, 6rem);
-      border: 3px solid $black;
-      border-radius: 60%;
-      @include u-flex($jc: center, $ai: center);
-
-      @include u-mqMax {
-        width: 4rem;
-        height: 4rem;
-        align-self: center;
-      }
+      gap: 1rem;
     }
 
     &__imgWrap {
@@ -193,6 +179,7 @@
       @include u-mqMax {
         width: 4rem;
         height: 3rem;
+        margin-top: 1rem;
       }
     }
 
