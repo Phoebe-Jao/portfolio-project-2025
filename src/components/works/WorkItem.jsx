@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Modal from "../Modal";
 
-const WorkItem = ({ title, date, category, image, description, url }) => {
+const WorkItem = ({ title, date, category, image, description, url, tags }) => {
   const [isOpen, setIsOpen] = useState(false);
   const formattedDate = date.replace(/-/g, ".");
   const formattedDate02 = new Date(date).toLocaleDateString("en-US", {
@@ -34,6 +34,12 @@ const WorkItem = ({ title, date, category, image, description, url }) => {
         <div className="modal__descriptionWrap">
           <p className="modal__description">{description}</p>
           <p className="modal__description"><span className="u-txtMedium">Date created:</span> {formattedDate02}</p>
+          <div className="modal__descriptionTagCont">
+            {
+              tags.map((tag, index) => (
+                <span key={index} className="modal__descriptionTag">{tag}</span>
+            ))}
+          </div>
         </div>
         <div className="modal__urlWrap">
           <span className="modal__urlLabel u-txtMedium">URL: </span>

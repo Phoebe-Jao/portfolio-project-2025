@@ -429,6 +429,24 @@ main
     margin-bottom: 2rem;
   }
 
+  &__descriptionTagCont {
+    @include u-flex($fw: wrap);
+    gap: 0.5rem;
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid $gray01;
+  }
+
+  &__descriptionTag {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: rgba($blue, 0.3);
+
+    @include u-mqMax {
+      padding: 1rem;
+    }
+  }
+
   &__urlWrap {
     a {
       color: $blue;

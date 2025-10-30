@@ -65,6 +65,7 @@ const Works = () => {
                   image={item.image}
                   description={item.description}
                   url={item.url}
+                  tags={item.tags}
                 />
               ))
             ) : (
