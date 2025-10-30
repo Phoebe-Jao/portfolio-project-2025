@@ -1416,6 +1416,72 @@ main
     text-align: justify;
   }
 }
+.topPage .aboutSec__nameCont {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1.3rem;
+}
+.topPage .aboutSec__imgCont {
+  width: clamp(3rem, 3.5vw, 6rem);
+  height: clamp(3rem, 3.5vw, 6rem);
+  border: 3px solid #000;
+  border-radius: 60%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .topPage .aboutSec__imgCont {
+    width: 4rem;
+    height: 4rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+.topPage .aboutSec__imgWrap {
+  max-width: clamp(2.5rem, 2.5vw, 3.5rem);
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .topPage .aboutSec__imgWrap {
+    width: 4rem;
+    height: 3rem;
+  }
+}
+.topPage .aboutSec__img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .topPage .contactSec {
   position: relative;
   padding: 7.5rem 0 8rem;
@@ -1588,16 +1654,12 @@ main
   }
 }
 .aboutPage .aboutSec__imgWrap {
-  max-width: clamp(16rem, 11.5vw, 32rem);
+  max-width: 97%;
   width: 100%;
   aspect-ratio: 1/1;
   position: relative;
-}
-@media screen and (max-width: 768px) {
-  .aboutPage .aboutSec__imgWrap {
-    width: 7rem;
-    height: 7rem;
-  }
+  border-radius: 100%;
+  overflow: hidden;
 }
 .aboutPage .aboutSec__img {
   width: 100%;
@@ -1631,6 +1693,7 @@ main
 @media screen and (max-width: 768px) {
   .aboutPage .aboutSec__hd {
     font-size: 6rem;
+    text-align: center;
     margin-bottom: 0.5rem;
   }
   .aboutPage .aboutSec__hd span {

@@ -164,6 +164,43 @@
         text-align: justify;
       }
     }
+
+    &__nameCont {
+      @include u-flex($ai: center);
+      gap: 1.3rem;
+    }
+
+    &__imgCont {
+      width: clamp(3rem, 3.5vw, 6rem);
+      height: clamp(3rem, 3.5vw, 6rem);
+      border: 3px solid $black;
+      border-radius: 60%;
+      @include u-flex($jc: center, $ai: center);
+
+      @include u-mqMax {
+        width: 4rem;
+        height: 4rem;
+        align-self: center;
+      }
+    }
+
+    &__imgWrap {
+      max-width: clamp(2.5rem, 2.5vw, 3.5rem);
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      position: relative;
+
+      @include u-mqMax {
+        width: 4rem;
+        height: 3rem;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
   }
 
   /*====================================================================

@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import PageHeader from "../components/block/PageHeader";
 import Timeline from "../components/block/Timeline";
-import img from '/images/about/about_img.png';
+import img from '/images/about/about_img2.png';
 import linkedin from '/images/about/about_linkedin.png';
 import github from '/images/about/about_github.png';
 import download from '/images/about/about_download.png';
@@ -53,7 +53,7 @@ const About = () => {
         <div className="aboutSec__inner">
           <div className="aboutSec__imgCont">
             <div className="aboutSec__imgWrap">
-              <img src={img} alt="email" className="aboutSec__img" />
+              <img src={img} alt="Phoebe Jao" className="aboutSec__img" />
             </div>
           </div>
           <div className="aboutSec__content">
