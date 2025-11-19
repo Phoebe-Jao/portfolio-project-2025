@@ -66,7 +66,7 @@ const workData = [
   {
     title: "Houseplants Shopping Site",
     category: "Web App",
-    date: "2025-10-24",
+    date: "2025-11-18",
     image: "thumb6.jpg",
     description: "An online shop for houseplants built with WordPress, Elementor, and WooCommerce",
     url: "https://wp111825.ct.ws/",
