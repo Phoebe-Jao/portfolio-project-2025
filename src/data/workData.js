@@ -63,6 +63,19 @@ const workData = [
       "Tailwind CSS",
     ],
   },
+  {
+    title: "Houseplants Shopping Site",
+    category: "Web App",
+    date: "2025-10-24",
+    image: "thumb6.jpg",
+    description: "An online shop for houseplants built with WordPress, Elementor, and WooCommerce",
+    url: "https://wp111825.ct.ws/",
+    tags: [
+      "WordPress",
+      "Elementor",
+      "WooCommerce",
+    ],
+  },
 ];
 
 export default workData;
